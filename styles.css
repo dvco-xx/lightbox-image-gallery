@@ -48,3 +48,17 @@ body {
     transform: scale(1.1);
 }
 
+@media (max-width: 1000px) {
+    .gallery .image {
+        padding: 7px;
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery .image {
+        padding: 4px;
+        width: 100%
+    }
+}
+
