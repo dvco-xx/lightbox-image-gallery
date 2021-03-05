@@ -62,3 +62,37 @@ body {
     }
 }
 
+.preview-box {
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    padding: 0 5px 5px 5px;
+    border-radius: 3px;
+}
+
+.preview-box .details {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 17px 10px;
+    justify-content: space-between;
+}
+
+.details .title {
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.preview-box .img-box {
+    display: flex;
+    width: 100%;
+}
+
+.preview-box .img-box img {
+    width: 100%;
+    border-radius: 0 0 3px 3px ;
+}
