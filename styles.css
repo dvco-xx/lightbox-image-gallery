@@ -14,30 +14,66 @@ body {
     min-height: 100vh;
 }
 
+
 .container {
     max-width: 120rem;
     margin: 0 auto;
     padding:10px;
 }
 
+nav .items {
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav .items .item {
+    padding: 7px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+nav .items .active {
+    color: #fff;
+    background: #007bff;
+}
+nav .items .item:hover {
+    color: #007bff;
+    background: #edf6ff;
+}
+
 .wrapper {
+    margin: 100px auto;
     max-width: 1100px;
 }
 
-.gallery span {
+.wrapper nav {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    justify-content: center;
 }
 
-.wrapper .gallery {
+.gallery {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .gallery .image {
     padding: 7px;
     width: calc(100% / 3);
+}
+
+.gallery .image span {
+    padding: 7px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 .gallery .image img {
@@ -48,6 +84,11 @@ body {
 
 .gallery .image:hover img {
     transform: scale(1.1);
+}
+
+.wrapper .gallery {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1000px) {
@@ -70,13 +111,21 @@ body {
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(0.9);
     background: #fff;
     padding: 0 5px 5px 5px;
     opacity: 0;
     pointer-events: none;
     border-radius: 3px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
 }
 
 .preview-box .details {
@@ -114,6 +163,7 @@ body {
 .img-box .slide {
     position: absolute;
     top: 50%;
+    z-index: 3;
     transform: translateY(-50%);
     font-size: 30px;
     cursor: pointer;
@@ -136,4 +186,14 @@ body {
 .preview-box .img-box img {
     width: 100%;
     border-radius: 0 0 3px 3px ;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
 }
