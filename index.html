@@ -14,55 +14,72 @@
   </head>
   <body>
     <div class="wrapper container">
+      <h1 class="landing-text">David's Gallery</h1>
       <nav>
         <div class="items">
-          <span class="item active">All</span>
-          <span class="item">Sketch</span
-          ><span class="item">Painting</span>
-          <span class="item">Illustration</span
-          ><span class="item">Poster</span>
-          <span class="item">Comic</span>
+          <span class="item active" data-name="all">All</span>
+          <span class="item" data-name="sketch">Sketch</span>
+          <span class="item" data-name="comic">Comic</span>
+          <span class="item" data-name="painting">Painting</span>
+          <span class="item" data-name="illustration">Illustration</span>
+          <span class="item" data-name="poster">Poster</span>
         </div>
       </nav>
       <div class="gallery">
-        <div class="image">
+        <div class="image" data-name="poster">
           <span><img src="./images/joker.jpg" alt="" /></span>
         </div>
-        <div class="image">
-          <span><img src="./images/gorilla-splash-sylie113-on-deviantart-gorilla-art and his heart grew 3 sizes.png" alt="" /></span>
+        <div class="image" data-name="illustration">
+          <span
+            ><img
+              src="./images/gorilla-splash-sylie113-on-deviantart-gorilla-art and his heart grew 3 sizes.png"
+              alt=""
+          /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="painting">
           <span><img src="./images/EbLQ6COXsAADBBR.jfif" alt="" /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="poster">
           <span><img src="./images/kill-bill.png" alt="" /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="sketch">
           <span><img src="./images/alien robots 3.jfif" alt="" /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="painting">
           <span><img src="./images/Etb2I_fUYAAv7KN.jfif" alt="" /></span>
         </div>
-        <div class="image">
-
+        <div class="image" data-name="poster">
           <span><img src="./images/minimalist movie poster.png" alt="" /></span>
         </div>
-        <div class="image">
-          <span><img src="./images/mortifying ordeal of being known.jfif" alt="" /></span>
+        <div class="image" data-name="comic">
+          <span
+            ><img src="./images/mortifying ordeal of being known.jfif" alt=""
+          /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="sketch">
           <span><img src="./images/alien robots 2.jfif" alt="" /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="illustration">
           <span><img src="./images/gorilla fierce.png" alt="" /></span>
         </div>
-        <div class="image">
-          <span><img src="./images/thumb_sexual-loneliness-frustration-frus-simping-never-being-loved-my-unwillingness-46198079.png" alt="" /></span>
+        <div class="image" data-name="comic">
+          <span
+            ><img
+              src="./images/thumb_sexual-loneliness-frustration-frus-simping-never-being-loved-my-unwillingness-46198079.png"
+              alt=""
+          /></span>
         </div>
-        <div class="image">
+        <div class="image" data-name="sketch">
           <span><img src="./images/alien robots 1.jfif" alt="" /></span>
         </div>
       </div>
+
+      <footer class="copyright">
+        <div class="up" id="up">
+          <i class="fa fa-chevron-up"></i>
+        </div>
+        <p>&copy; 2021 David Osuchukwu</p>
+      </footer>
     </div>
 
     <div class="preview-box">
@@ -73,6 +90,10 @@
           of
           <p class="total-img"></p>
         </span>
+        <span class="category"
+          >Category:
+          <p></p
+        ></span>
         <span class="icon fa fa-times"></span>
       </div>
       <div class="img-box">
@@ -88,6 +109,7 @@
     <div class="shadow"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
